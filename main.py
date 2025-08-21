@@ -5,6 +5,15 @@ def adicionar_tarefa(tarefas, nome_tarefa):
     tarefa = {"tarefa": nome_tarefa, "concluida": False}
     tarefas.append(tarefa)
     print("Tarefa adicionada com sucesso!!!")
+    return
+
+def visualizar_tarefa(tarefas):
+    print("\n== Lista de Tarefas ==")
+    for indice, tarefa in enumerate(tarefas, start = 1):
+        status = "✓" if tarefa["concluida"] else " "
+        nome_tarefa = tarefa["tarefa"]
+        print(f'{indice}. [{status}] {nome_tarefa}')
+    return
 
 
 
@@ -22,7 +31,7 @@ def adicionar_tarefa(tarefas, nome_tarefa):
 
 
 
-# Menu de 
+# Menu de Comandos
 while True:
     print("\n== Menu Do Gerenciador ==")
     print(
@@ -41,7 +50,7 @@ while True:
         tarefa = input("Adicione uma tarefa: ")
         adicionar_tarefa(tarefas, tarefa)
     elif digito == 2:
-        pass
+        visualizar_tarefa(tarefas)
     elif digito == 3:
         pass
     elif digito == 4:
