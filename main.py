@@ -1,4 +1,3 @@
-
 # Funções
 tarefas = []
 def adicionar_tarefa(tarefas, nome_tarefa):
@@ -21,15 +20,13 @@ def editar_tarefa(tarefas,indice_tarefa):
     tarefas[indice_tarefa]["tarefa"] = novo_nome
     print("Tarefa atualizada com sucesso!!!")
 
+def concluir_tarefa(tarefas, indice_tarefa):
+    indice_tarefa -= 1
 
-
-
-
-
-
-
-
-
+    if  tarefas[indice_tarefa]["concluida"]:
+        tarefas[indice_tarefa]["concluida"] = False
+    else: 
+        tarefas[indice_tarefa]["concluida"] = True
 
 
 # Menu de Comandos
@@ -40,8 +37,8 @@ while True:
 [1]. adicionar tarefa
 [2]. ver tarefas
 [3]. editar tarefa
-[4]. concluir tarefa
-[5]. remover tarefa
+[4]. concluir/remover tarefa
+[5]. excluir tarefas concluidas
 [6]. Sair 
 """
     )
@@ -57,7 +54,9 @@ while True:
         indice_tarefa = int(input("\nInforme a tarefa que deseja editar: "))
         editar_tarefa(tarefas, indice_tarefa)
     elif digito == 4:
-        pass
+        visualizar_tarefa(tarefas)
+        indice_tarefa = int(input("\nInforme a tarefa: "))
+        concluir_tarefa(tarefas,indice_tarefa)
     elif digito == 5:
         pass
     elif digito == 6:
