@@ -15,10 +15,11 @@ def visualizar_tarefa(tarefas):
         print(f'{indice}. [{status}] {nome_tarefa}')
     return
 
-
-
-
-
+def editar_tarefa(tarefas,indice_tarefa):
+    indice_tarefa -= 1
+    novo_nome = input("Atualize a tarefa: ")
+    tarefas[indice_tarefa]["tarefa"] = novo_nome
+    print("Tarefa atualizada com sucesso!!!")
 
 
 
@@ -52,7 +53,9 @@ while True:
     elif digito == 2:
         visualizar_tarefa(tarefas)
     elif digito == 3:
-        pass
+        visualizar_tarefa(tarefas)
+        indice_tarefa = int(input("\nInforme a tarefa que deseja editar: "))
+        editar_tarefa(tarefas, indice_tarefa)
     elif digito == 4:
         pass
     elif digito == 5:
