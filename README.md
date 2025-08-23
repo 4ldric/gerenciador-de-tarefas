@@ -7,12 +7,11 @@ Um gerenciador de tarefas simples e eficiente, desenvolvido em Python para ajuda
 * `Adicionar Tarefas`: Permitir ao usuário adicionar novas tarefas.
 * `Visualizar Tarefas`: Mostrar a lista de todas as tarefas.
 * `Marcar Tarefas como Concluídas`: Opção para marcar uma tarefa como finalizada.
-* `Remover Tarefas`: Capacidade de excluir tarefas da lista.
+* `Remover Tarefas`: Capacidade de excluir tarefas concluidas da lista.
 
 ### 🛠️ **Tecnologias Utilizadas**
 
 * `Linguagem`: Python `3.x`
-* `Bibliotecas`: 
 
 ### 🚀 **Como Usar**
 
@@ -24,8 +23,6 @@ Um gerenciador de tarefas simples e eficiente, desenvolvido em Python para ajuda
         `git clone https://github.com/4ldric/gerenciador-de-tarefas.git`
     * Navegue até o diretório do projeto:
         `cd gerenciador-de-tarefas`
-    * (Opcional) Instale as dependências:
-        `pip install -r requirements.txt`
 
 3.  **Execução**:
     * Execute o script principal:
@@ -35,7 +32,7 @@ Um gerenciador de tarefas simples e eficiente, desenvolvido em Python para ajuda
 
 ### 🟢 **Status do Projeto**
 
-* `[Em desenvolvimento]`
+* `[Concluido]`
 
 
 ### 📧 **Contato**
